@@ -18,8 +18,17 @@
             </div>
             <div class="col-4 offset-1">
                 <h1>Данные</h1>
-                <div class="alert alert-primary">Погода в городе</div>
-            </div>
+                <div class="alert alert-primary">
+                    <div class="row">
+                        <div class="col-9">
+                            Сейчас в городе <b>{{ city }}</b><br>
+                            Температура <b>{{ temperature }} <sup>o</sup>C</b>
+                        </div>
+                        <div class="col-2 offset-1">
+                            <img src="http://openweathermap.org/img/wn/{{ icon }}.png" alt="">
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 {% endblock %}
