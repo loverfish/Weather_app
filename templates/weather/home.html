@@ -6,12 +6,15 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-5 offset-1">
-                <h1>Погода в вашем городе</h1>
+                <div class="mb-5"><h1>Погода в вашем городе</h1></div>
                 <form action="" method="post">
                     {% csrf_token %}
-                    <label for="city" class="mb-2"><b>Город</b></label>
-                    <label for="">{{ error_dict.exception }}</label>
-                    {{ form.title }}
+                    {% if error_dict %}
+                        <div class="alert alert-danger">
+                            {{ error_dict.exception }}
+                        </div>
+                    {% endif %}
+                        {{ form.title }}
                     <input type="submit" name="send" value="Узнать" class="btn btn-outline-success">
                 </form>
 

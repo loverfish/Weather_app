@@ -9,6 +9,7 @@ class CityForm(forms.ModelForm):
         fields = ['title']
 
         widgets = {'title': forms.TextInput(attrs={
-            'class': 'form-control mb-2',
-            'placeholder': 'Введите город'
+            'class': 'form-control mb-3',
+            'placeholder': 'Введите город',
+            'id': 'city',
         })}
